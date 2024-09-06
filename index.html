@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura na Floresta Encantada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="step-1" class="step passo ativo">
+            <p class="message">Você está na borda da floresta encantada. O que você faz?</p>
+            <button class="button" data-next="step-2">Ir para a floresta encantada</button>
+        </div>
+
+        <div id="step-2" class="step passo">
+            <p class="message">Você entrou na floresta encantada. Três caminhos se abrem diante de você:</p>
+            <button class="button" data-next="step-3" data-path="1">Caminho para a clareira iluminada</button>
+            <button class="button" data-next="step-3" data-path="2">Descer pelo terreno íngreme</button>
+            <button class="button" data-next="step-3" data-path="3">Continuar pela trilha sinuosa</button>
+        </div>
+
+        <div id="step-3" class="step passo">
+            <p class="message">Você escolheu um caminho. O que você faz agora?</p>
+            <p id="result"></p>
+            <button class="button" data-next="step-1">Voltar ao início</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
